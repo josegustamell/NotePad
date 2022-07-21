@@ -1,0 +1,24 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/add-notebook.css' %}">
+
+
+
+<div class="container">
+
+  <h1>New notebook</h1>
+
+  <form method="post" action="">
+    {% csrf_token %}
+
+    <p>Group notes that have common topics in notebooks.</p>
+    <label>Name</label>
+    <input id="input-name" type="text" name="name-notebook">
+    <button id="button" type="submit">Create</button>
+  </form>
+</div>
+
+{% endblock %}}

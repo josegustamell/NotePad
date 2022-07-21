@@ -1,0 +1,23 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/add-notebook.css' %}">
+
+
+
+<div class="container">
+
+  <h1>Rename {{notebook.name}}</h1>
+
+  <form method="post" action="">
+    {% csrf_token %}
+    <label>Name</label>
+    <input id="input-name" type="text" value="{{notebook.name}}" name="name">
+    <button id="button" type="submit">Edit</button>
+  </form>
+
+</div>
+
+{% endblock %}}

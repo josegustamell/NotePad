@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    background-color: #FAFAFA;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.container {
+
+    max-width: 550px;
+    margin: auto;
+    margin-top: 80px;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 5px;
+
+}
+
+.top {
+    background-color: #f2a23f;
+    padding: 1px;
+    text-align: center;
+    color: #FAFAFA;
+    margin-bottom: 30px;
+
+}
+
+.login label{
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 135px
+
+}
+
+#username, #password{
+    display: block;
+    height: 35px;
+    width: 250px;
+    margin: auto;
+    margin-bottom: 20px;
+   padding: 0px 15px;
+}
+
+#username, #password:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+    border: 1px solid black;
+}
+
+#button {
+    margin-left: 230px;
+    margin-bottom: 20px;
+    padding: 10px 30px;
+    color: white;
+    background-color: #2c2c2c;
+    border: none;
+    border-radius: 5px;
+}
+
+#button:hover{
+    cursor: pointer;
+}
+
+.login-link {
+    position: relative;
+    top: 10px;
+    left: 420px;
+}
+
+.login-link a {
+    color: rgba(0,105,217,255);
+    text-decoration: none;
+}
+
+.login-link a:hover {
+   text-decoration: underline;
+}
+
+#message{
+    text-decoration: underline;
+}

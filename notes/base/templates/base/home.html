@@ -1,0 +1,34 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/notes.css' %}">
+
+<div class="top">
+    <h1>All Notes</h1>
+    <h2 id="number-notes">{{number_notes}}</h2>
+
+    <hr>
+</div>
+
+{% if number_notebooks == 0 and number_notes == 0 %}
+
+<p id="help-text">You can start adding a <a id="notebook-help" href="{% url 'add_notebook' %}">notebook</a>
+    or adding note clicking on the <a id="note-help" href="{% url 'add_note' %}">&#43;</a> button in left!</p>
+
+{% else %}
+
+    <div class="notes">
+        {% for note in notes %}
+            <div class="note">
+                <a href="{% url 'edit' note.pk %}">{{note.title}}</a>
+                <p class="description">{{ note.content|linebreaks|truncatewords:30 }}</p>
+            </div>
+
+        {% endfor %}
+    </div>
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/notes.css' %}">
+
+<div class="top-query">
+    <h1>{{query}}</h1>
+    <hr>
+</div>
+
+<div class="notes-query">
+    {% for note in note %}
+        <div class="note">
+            <a href="{% url 'edit' note.pk %}">{{note.title}}</a>
+            <p class="description">{{ note.content|linebreaks|truncatewords:30 }}</p>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

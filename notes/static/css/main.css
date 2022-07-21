@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Merriweather&display=swap');
+
+body h1{
+    font-family: 'Merriweather', serif;
+}
+
+body {
+    background-color: #1a1a1a;  /* #202124; */
+    font-family: 'Inter', sans-serif;
+    }
+
+.sidenav {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        padding-top: 15px;
+        overflow: auto;
+    }
+
+.options {
+        text-align: center;
+        color: #FAFAFA;
+        margin-bottom: 13px;
+    }
+
+
+
+
+   .content {
+       margin-left: 200px;
+
+    }
+
+   #logout {
+       font-size: 15px;
+       text-decoration: none;
+       color: #FAFAFA;
+       
+   }
+
+   #logout:hover {
+       color: #f2a23f;
+
+   }
+
+    #search-box {
+        text-align: center;
+        text-decoration: none;
+        background-color: #111;
+        color: #fff;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #FAFAFA;
+        width: 170px;
+        padding: 6px 5px;
+        margin-top: 20px;
+    }
+
+    #add-note {
+        margin-top: 15px;
+        display: block;
+        color: #f2a23f;
+        font-size: 30px;
+        text-decoration: none;
+        padding: 3px 5px;
+        margin-bottom: 8px;
+    }
+
+     #add-note:hover{
+         border-radius: 2px;
+     }
+
+    #new-notebook {
+        padding: 12px 39px;
+        text-decoration: none;
+        color: #FAFAFA;
+        }
+
+   #new-notebook:hover {
+       color: #f2a23f;
+    }
+
+   #home{
+       text-align: center;
+       padding: 10px 10px;
+       font-size: 18px;
+       text-decoration: none;
+       color: #FAFAFA;
+       display: block;
+   }
+
+   #home:hover {
+        color: #f2a23f;
+   }
+
+   .notebooks a {
+        text-align: center;
+        padding: 15px 10px;
+        font-size: 18px;
+        text-decoration: none;
+        color: #FAFAFA;
+        display: block;
+
+   }
+
+   .notebooks a:hover {
+        color: #f2a23f;
+   }
+

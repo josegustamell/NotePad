@@ -1,0 +1,35 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/add-note.css' %}">
+
+<div class="top">
+    <hr>
+</div>
+
+<div class="container">
+    <form method="post" action="">
+        {% csrf_token %}
+        <input id="input-title" type="text" name="title_note" placeholder="Title" autocomplete="off">
+
+        <textarea id="input-text" name="content" placeholder="Write here..." autocomplete="off"></textarea>
+
+        <select id="input-select" name="notebook">
+            <option value='none'>Select a notebook...</option>
+            {% for notebook in notebooks %}
+                <option value='{{notebook.id}}'>{{notebook.name}}</option>
+            {% endfor %}
+        </select>
+
+        <input id="input-create" name="notebook_new" type="text" placeholder="Create a new notebook">
+        {% if number_notebooks == 0 %}
+            <p id="notebook-help">Don´t know what is a notebook? <a href="{% url 'add_notebook' %}">Click here</a></p>
+        {% endif %}
+        <button id="button-create" type="submit">Create</button>
+
+    </form>
+</div>
+
+{% endblock %}}

@@ -1,0 +1,7 @@
+from re import U
+from django.contrib import admin
+from .models import *
+
+admin.site.register(User)
+admin.site.register(Notebook)
+admin.site.register(Notes)

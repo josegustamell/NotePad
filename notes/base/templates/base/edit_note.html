@@ -1,0 +1,36 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/add-note.css' %}">
+
+<div class="top">
+  <hr>
+</div>
+
+
+<div class="container">
+  <form method="POST" action="">
+    {% csrf_token %}
+
+      <input name="title_note" id="input-title" type="text" value="{{note.title}}" placeholder="Title" autocomplete="off">
+
+      <textarea name="content" id="input-text" placeholder="Write here..." autocomplete="off">{{note.content}}</textarea>
+
+      <select name="notebook" id="input-select">
+            <option value=''>{{note.notebook}}</option>
+            {% for notebook in notebooks_select %}
+                <option value='{{notebook.id}}'>{{notebook.name}}</option>
+            {% endfor %}
+      </select>
+
+    <button id="button-edit" type="submit">Edit</button>
+  </form>
+
+
+    <a id="button-delete" href="{% url 'delete-note' note.pk %}">Delete</a>
+</div>
+
+
+{% endblock %}

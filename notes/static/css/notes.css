@@ -1,0 +1,116 @@
+body {
+    margin-bottom: 20px;
+}
+
+.top-query {
+    text-align: center;
+    color: #FAFAFA;
+    margin-bottom: 10px;
+    padding: 0px 0px 10px 0px;
+}
+
+.notes {
+    font-size: 20px;
+    margin-top: 15px;
+    overflow: auto;
+
+}
+
+.top h1{
+    text-align: center;
+    color: #FAFAFA;
+    margin-bottom: 10px;
+}
+
+.top a {
+    text-decoration: none;
+    color: #FAFAFA;
+}
+
+#number-notes {
+    text-align: center;
+    color: #FAFAFA;
+    margin: auto;
+
+}
+
+.notes {
+    font-size: 20px;
+    margin-top: 25px;
+    overflow: auto;
+
+}
+
+.notes p {
+    color: #fff;
+
+}
+
+.note {
+    display: inline-block;
+    overflow: hidden;
+    margin: auto;
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #2c2c2c;
+    border-radius: 10px;
+    width: 500px;
+    height: 120px;
+    padding: 30px;
+    background-color: #292929;
+}
+
+.note a {
+    padding: 10px;
+    color: #FAFAFA;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.note a:hover{
+    color: #f2a23f;
+}
+
+#delete {
+    position: absolute;
+    right: 50px;
+    top: 30px;
+    font-size: 25px;
+}
+
+#add {
+    position: absolute;
+    right: 100px;
+    top: 25px;
+    font-size: 40px;
+    color: #f2a23f;
+}
+
+#help-text {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 25px;
+    color: #fff;
+}
+
+#notebook-help, #note-help {
+
+    color: #fff;
+
+}
+
+#note-help {
+    text-decoration: none;
+    color: #f2a23f;
+    font-size: 30px;
+}
+
+#notebook-help:hover {
+    color: #f2a23f;
+
+}
+
+

@@ -1,0 +1,22 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+{% load static %}
+<link type="text/css" rel="stylesheet" href="{% static '/css/delete.css' %}">
+
+<div class="container">
+    <form method="post" action="">
+    {% csrf_token %}
+      <h1>Do you want to delete {{note.title}}?</h1>
+
+      <button id="button-delete" type="submit">Delete</button>
+        {% if note.notebook == None %}
+        <a id="button-no1" href="{% url 'home' %}">No</a>
+        {% else %}
+      <a id="button-no2" href="{% url 'notebook' notebook.pk %}">No</a>
+        {% endif %}
+
+    </form>
+</div>
+{% endblock %}

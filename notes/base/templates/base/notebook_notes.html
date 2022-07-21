@@ -1,0 +1,27 @@
+{% extends 'base/main.html' %}
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/notes.css' %}">
+
+<div class="top">
+    <h1> <a href="{% url 'edit-notebook' notebook.pk %}">{{notebook.name}}</a> </h1>  <h2 id="number-notes">{{number_notes}}</h2>
+    <a id="delete" href="{% url 'delete-notebook' notebook.pk %}">🗑️</a>
+    <a id="add" name="add" href="{% url 'add-in-notebook' notebook.pk %}">&#43;</a>
+</div>
+
+<hr>
+
+<div class="notes">
+    {% for note in notes %}
+        <div class="note">
+
+            <a href="{% url 'edit' note.pk %}">{{note.title}}</a>
+            <p class="description">{{note.content|linebreaks|truncatewords:30}}</p>
+        </div>
+
+    {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notes</title>
+</head>
+<body>
+
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+
+    <div class="sidenav">
+
+        <div class="options">
+
+            <a id="logout" href="{% url 'logout' %}">Logout</a>
+
+            <form method="GET" action="{% url 'search' %}">
+                <input id="search-box" type="text" name="q" placeholder="Search...">
+            </form>
+
+            <a id="add-note" href="{% url 'add_note' %}">&#43;</a>
+            <a id="new-notebook" href="{% url 'add_notebook' %}">New notebook</a>
+        </div>
+
+        <a id="home" href="{% url 'home' %}">All notes</a>
+
+        {% for notebook in notebooks_main %}
+            <div class="notebooks">
+                <a href="{% url 'notebook' notebook.pk %}">{{notebook.name}}</a>
+            </div>
+        {% endfor %}
+
+
+
+    </div>
+
+
+
+    <div class="content">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+
+</body>
+</html>
