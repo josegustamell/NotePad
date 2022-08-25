@@ -1,19 +1,17 @@
-![image](https://user-images.githubusercontent.com/90484417/186724303-22993e80-64a0-43fb-bfe1-20b3d38dabba.png)
-
-
 # NotePad application based on Evernote using Django
+
+![image](https://user-images.githubusercontent.com/90484417/186724303-22993e80-64a0-43fb-bfe1-20b3d38dabba.png)
 
 Live demo in https://notepad-application-django.herokuapp.com
 
 # Features
-***
-* Custom user.
-* Create notes that can be separated by notebooks or not.
-* Edit notes.
-* Delete notes.
-* See all the notes inside a notebook.
-* See all the notes of all notebooks.
-* Clicking to add a note inside a notebook page already presets the note for that specific notebook.
+  * Custom user.
+  * Create notes that can be separated by notebooks or not.
+  * Edit notes.
+  * Delete notes.
+  * See all the notes inside a notebook.
+  * See all the notes of all notebooks.
+  * Clicking to add a note inside a notebook page already presets the note for that specific notebook.
 
 # Download & Setup Instructions
   1. Clone project: git clone https://github.com/josegustamell/NotePad
