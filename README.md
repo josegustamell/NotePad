@@ -1,4 +1,4 @@
-# NotePad application based on Evernote using Django
+# NotePad Application Based on Evernote With Django
 ***
 ![image](https://user-images.githubusercontent.com/90484417/186724303-22993e80-64a0-43fb-bfe1-20b3d38dabba.png)
 ***
